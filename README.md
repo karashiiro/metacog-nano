@@ -12,8 +12,16 @@ cargo build --release
 
 To install the binary to `~/.cargo/bin` (which is typically on your `$PATH`), run:
 
+**Local clone:**
+
 ```sh
 cargo install --path .
+```
+
+**Remote install:**
+
+```sh
+cargo install --git https://github.com/karashiiro/metacog-nano.git
 ```
 
 This lets you reference `metacog-nano` by name in MCP configs without needing a full path.
@@ -26,7 +34,7 @@ cargo test
 
 ## MCP Configuration
 
-After installing with `cargo install --path .`:
+After installing with `cargo install`:
 
 ```json
 {
