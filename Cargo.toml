@@ -1,6 +1,17 @@
 [package]
 name = "metacog-nano"
-version = "0.1.0"
+version = "0.5.0"
 edition = "2024"
 
 [dependencies]
+rmcp = { version = "1.2.0", features = ["server", "transport-io"] }
+tokio = { version = "1", features = ["macros", "rt-multi-thread", "io-std"] }
+serde = { version = "1.0", features = ["derive"] }
+schemars = "1.0"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+anyhow = "1.0"
+
+[dev-dependencies]
+rmcp = { version = "1.2.0", features = ["server", "client", "transport-io"] }
+serde_json = "1.0"
